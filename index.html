@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!-- CROSS INTERNATIONAL Food & Market 2026 LP / GitHub Pages用 -->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CROSS INTERNATIONAL Food & Market 2026｜出展募集</title>
+  <meta name="description" content="CROSS INTERNATIONAL Food & Market 2026は、ワインコンプレックスの実績を土台に、ワインを軸として飲食業界に必要な食材・飲料・商材を提案するB2B商談会です。出展料40,000円から。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&display=swap');
+
+    :root{
+      --navy:#002B49; --navy2:#063B61; --orange:#E94E1B; --green:#2E6B29;
+      --gold:#C99518; --cream:#FBF7EE; --cream2:#FFFAF1; --line:#E8DDC8; --ink:#24313A;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--cream2);overflow-x:hidden}
+    a{text-decoration:none}
+    .font-eng{font-family:'Montserrat',sans-serif}
+    .font-mincho{font-family:'Shippori Mincho',serif}
+    .keep-all{word-break:keep-all;overflow-wrap:anywhere}
+    .container-wide{max-width:1180px;margin:0 auto}
+    .container-narrow{max-width:960px;margin:0 auto}
+    .section{padding:6rem 1.5rem}
+    @media(min-width:768px){.section{padding:7.2rem 4rem}}
+
+    .logo-stack{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:.86}
+    .logo-stack.center{align-items:center}
+    .logo-cross{font-family:'Montserrat',sans-serif;font-weight:900;color:var(--navy);letter-spacing:-.045em}
+    .logo-tokyo{font-family:'Montserrat',sans-serif;font-weight:900;color:var(--orange);letter-spacing:-.045em}
+    .logo-intl{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--orange);letter-spacing:.03em;line-height:1}
+    .logo-market{font-family:'Shippori Mincho',serif;font-weight:800;color:var(--green);line-height:1}
+    .logo-year{font-family:'Montserrat',sans-serif;font-weight:900;color:var(--navy);line-height:.9}
+
+    .btn-primary{background:linear-gradient(135deg,#E94E1B,#F27B2C);color:white;box-shadow:0 18px 34px rgba(233,78,27,.24);transition:.22s}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 42px rgba(233,78,27,.32)}
+    .btn-outline{background:white;border:1px solid rgba(46,107,41,.42);color:var(--green);transition:.2s}
+    .btn-outline:hover{background:#F1F8ED;transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,#C99518,#E7B93B);color:white;transition:.22s}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 26px rgba(201,149,24,.26)}
+
+    .hero-card,.soft-card{background:rgba(255,255,255,.96);border:1px solid rgba(0,43,73,.08);box-shadow:0 18px 45px rgba(0,43,73,.08)}
+    .stat-card{background:rgba(255,255,255,.98);border:1px solid rgba(0,43,73,.08);box-shadow:0 18px 45px rgba(0,43,73,.08);border-radius:28px;padding:2rem 1.6rem;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:220px}
+    .stat-kicker{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:.14em;font-size:.66rem;color:#A98A43;margin-bottom:.75rem}
+    .stat-number{font-family:'Montserrat',sans-serif;font-weight:900;line-height:1;letter-spacing:-.04em;display:flex;align-items:baseline;justify-content:center;margin:0;color:var(--navy)}
+    .stat-number-main{font-size:clamp(3.15rem,5vw,4.05rem)}
+    .stat-number-unit{font-size:clamp(1.35rem,2.1vw,1.75rem);line-height:1;margin-left:.08em}
+    .stat-number-price .stat-number-main{font-size:clamp(2.55rem,4.2vw,3.45rem);letter-spacing:-.055em}
+    .stat-number-price .stat-number-unit{font-size:clamp(1.25rem,2vw,1.6rem);margin-left:.06em}
+    .stat-label{font-weight:900;color:var(--navy);font-size:1rem;margin-top:1.05rem;margin-bottom:.65rem}
+    .stat-text{font-size:.84rem;line-height:1.75;color:#667085;margin:0;max-width:250px}
+
+    .section-label{font-family:'Montserrat',sans-serif;font-weight:900;color:var(--orange);letter-spacing:.22em;font-size:.82rem;text-transform:uppercase;margin-bottom:1rem}
+    .thin-divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+    .cross-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .cross-lines span{position:absolute;height:1px;width:460px;transform:rotate(45deg);opacity:.5}
+    .cross-lines .l1{background:var(--gold);top:8rem;left:-9rem}
+    .cross-lines .l2{background:var(--navy);top:25rem;left:-12rem}
+    .cross-lines .l3{background:var(--orange);top:7rem;right:-9rem}
+    .cross-lines .l4{background:var(--green);top:18rem;right:-8rem}
+    .cross-lines .l5{background:var(--gold);bottom:3rem;right:-12rem}
+
+    .category-card{border:1px solid rgba(0,43,73,.13);background:white;transition:.18s}
+    .category-card:hover{transform:translateY(-3px);border-color:rgba(46,107,41,.35);box-shadow:0 15px 30px rgba(0,43,73,.08)}
+    .support-card{position:relative;overflow:hidden}
+    .support-card:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--orange),var(--gold),var(--green))}
+
+    .booth-card{background:white;border:1px solid rgba(0,43,73,.10);border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(0,43,73,.08);transition:.22s}
+    .booth-card:hover{transform:translateY(-5px);box-shadow:0 24px 58px rgba(0,43,73,.11)}
+    .booth-card.featured{border:2px solid var(--gold)}
+    .booth-img-wrap{background:linear-gradient(180deg,#fffdf8,#f2eadc);padding:16px}
+    .booth-img-wrap img{width:100%;height:240px;object-fit:contain;border-radius:20px;border:1px solid rgba(0,43,73,.09);background:white;display:block}
+    .booth-price{font-family:'Montserrat',sans-serif;font-weight:900;color:var(--orange);font-size:2.2rem;line-height:1}
+
+    .info-row{display:grid;grid-template-columns:180px 1fr}
+    .info-row dt{background:#fffaf1;color:var(--navy);font-weight:900}
+    .info-row dt,.info-row dd{padding:1rem;border-bottom:1px solid var(--line)}
+
+    @media(max-width:767px){
+      .info-row{grid-template-columns:1fr}
+      .section{padding:4.6rem 1.25rem}
+      .booth-img-wrap img{height:210px}
+      .mobile-bottom-space{padding-bottom:6rem}
+    }
+
+    .faq-wrap{max-width:980px;margin:0 auto}
+    .faq-group-title{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:.16em;color:var(--gold);font-size:.78rem;text-transform:uppercase;margin:2rem 0 1rem;text-align:left}
+    .faq-list{display:grid;gap:12px;text-align:left}
+    .faq-item{background:rgba(255,255,255,.96);border:1px solid rgba(0,43,73,.10);border-radius:20px;box-shadow:0 14px 34px rgba(0,43,73,.06);overflow:hidden}
+    .faq-item summary{list-style:none;cursor:pointer;padding:1.15rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:900;color:var(--navy)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:900;color:var(--orange);font-size:1.4rem;line-height:1;transition:.2s}
+    .faq-item[open] summary::after{transform:rotate(45deg)}
+    .faq-answer{padding:0 1.25rem 1.25rem;color:#65727d;font-size:.94rem;line-height:1.9}
+    .faq-answer p{margin:.2rem 0 0}
+    .faq-answer a{color:var(--orange);font-weight:900;text-decoration:underline;text-underline-offset:3px}
+
+  </style>
+</head>
+<body class="mobile-bottom-space">
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/92 backdrop-blur-md border-b border-[#E8DDC8]">
+    <nav class="container-wide px-5 md:px-8 py-3 flex items-center justify-between gap-6">
+      <a href="#top" aria-label="CROSS INTERNATIONAL" class="logo-stack shrink-0">
+        <span class="logo-cross text-lg md:text-xl">CROSS</span>
+        <span class="logo-tokyo text-lg md:text-xl">TOKYO</span>
+        <span class="logo-intl text-[9px] md:text-[10px]">INTERNATIONAL</span>
+        <span class="logo-market text-[10px] md:text-xs">Food & Market</span>
+        <span class="logo-year text-base md:text-lg">2026</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-[#002B49]">
+        <a href="#why" class="hover:text-[#E94E1B]">強み</a>
+        <a href="#support" class="hover:text-[#E94E1B]">応援したい商品</a>
+        <a href="#categories" class="hover:text-[#E94E1B]">募集商材</a>
+        <a href="#booth" class="hover:text-[#E94E1B]">出展料</a>
+        <a href="#outline" class="hover:text-[#E94E1B]">開催概要</a>
+        <a href="#faq" class="hover:text-[#E94E1B]">Q&A</a>
+      </div>
+      <a href="https://tokyowinecomplex.com/entry-form-2026-c-international/" target="_blank" rel="noopener noreferrer" class="btn-gold px-5 md:px-7 py-3 rounded-2xl font-black text-sm inline-flex items-center gap-2">
+        出展お申し込み <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top" class="relative bg-[#fffaf1] pt-28 md:pt-36 overflow-hidden">
+    <div class="cross-lines"><span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span><span class="l5"></span></div>
+    <section class="relative container-narrow px-5 md:px-8 pb-16 md:pb-20 text-center">
+      <div class="logo-stack center mb-8">
+        <span class="logo-cross text-6xl sm:text-7xl md:text-8xl">CROSS</span>
+        <span class="logo-tokyo text-6xl sm:text-7xl md:text-8xl">TOKYO</span>
+        <span class="logo-intl text-xl md:text-2xl mt-2">INTERNATIONAL</span>
+        <span class="logo-market text-2xl md:text-4xl mt-2">Food & Market</span>
+        <span class="logo-year text-5xl md:text-7xl mt-2 tracking-wide">2026</span>
+      </div>
+
+      <p class="text-[#C99518] font-black tracking-[.16em] text-sm md:text-base mb-5">価値が交差する市場をつくる</p>
+      <h1 class="font-mincho text-[#002B49] text-4xl md:text-6xl font-bold leading-tight keep-all mb-6">
+        ワインを軸に、<br>飲食業界の仕入れが交差する
+      </h1>
+      <p class="text-[#263238] text-base md:text-lg leading-loose max-w-3xl mx-auto keep-all mb-8">
+        ワインはもちろん、飲食業界で必要とされる<br class="hidden sm:block">
+        食材・飲料・加工食品を、<br class="hidden sm:block">
+        仕入れに関わるプロへ直接提案できる展示会です。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="https://tokyowinecomplex.com/entry-form-2026-c-international/" target="_blank" rel="noopener noreferrer" class="btn-primary rounded-full px-9 py-4 font-black inline-flex items-center justify-center gap-3">
+          出展申込はこちら <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#categories" class="btn-outline rounded-full px-9 py-4 font-black inline-flex items-center justify-center gap-3">
+          募集商材を見る <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="stat-card">
+          <p class="stat-kicker">BUYER</p>
+          <p class="stat-number text-[#002B49]"><span class="stat-number-main">93</span><span class="stat-number-unit">%</span></p>
+          <h3 class="stat-label">仕入れに関わる来場者</h3>
+          <p class="stat-text">商品選定・仕入れの決定、関与、サポートに関わる来場者が大半を占めます。</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-kicker">RESULT</p>
+          <p class="stat-number text-[#2E6B29]"><span class="stat-number-main">88</span><span class="stat-number-unit">%</span></p>
+          <h3 class="stat-label">商談成果を実感</h3>
+          <p class="stat-text">商談が前進した、または成果につながったと感じた出展社が多数を占めました。</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-kicker">PRICE</p>
+          <p class="stat-number stat-number-price text-[#E94E1B]"><span class="stat-number-main">¥40,000</span><span class="stat-number-unit">〜</span></p>
+          <h3 class="stat-label">出展しやすい価格</h3>
+          <p class="stat-text">飲食業界向けの販路開拓を、無理のないコストで始めやすい出展設計です。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="thin-divider"></div>
+
+  <section id="why" class="section bg-white">
+    <div class="container-narrow text-center">
+      <p class="section-label">WHY WINE COMPLEX</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-7">ワインコンプレックスだから<br class="hidden sm:block">できること</h2>
+      <p class="text-gray-700 leading-loose mb-5">CROSS INTERNATIONALは、ゼロから立ち上げる食品展示会ではありません。<br class="hidden sm:block">長年にわたりプロ向け試飲商談会を開催してきた、<br class="hidden sm:block">ワインコンプレックスの来場者基盤と運営実績を土台にしています。</p>
+      <p class="text-gray-700 leading-loose mb-5">私たちの原点は、<br class="hidden sm:block">小さなインポーターの背中を押したいという想いです。</p>
+      <p class="text-gray-700 leading-loose mb-5">大手流通に乗らなくても、<br class="hidden sm:block">情熱を込めてつくられた素晴らしい商品がある。</p>
+      <p class="text-gray-700 leading-loose mb-12">その価値を、正しく評価できるプロフェッショナルへ届けるために、<br class="hidden sm:block">CROSS INTERNATIONALは生まれました。</p>
+    </div>
+  </section>
+
+  <section id="table" class="section bg-[#FBF7EE] border-y border-[#E8DDC8]">
+    <div class="container-wide text-center">
+      <p class="section-label">FROM WINE TO TABLE</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-6">ワインの隣には<br class="hidden sm:block">食がある</h2>
+      <p class="text-gray-700 leading-loose mb-10 max-w-3xl mx-auto">ワインが輝くテーブルには、<br class="hidden sm:block">同じ熱量でつくられた食があります。<br><br>希少なジビエ、クラフト飲料、地域の加工食品。<br class="hidden sm:block">まだ広く知られていないだけで、<br class="hidden sm:block">飲食業界に届けるべき価値を持つ商品があります。</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-left">
+        <div class="soft-card rounded-3xl p-7"><p class="font-eng font-black text-[#C99518] tracking-[.18em] text-xs mb-4">01</p><h3 class="font-bold text-[#002B49] text-xl mb-3">希少なジビエ</h3><p class="text-sm text-gray-600 leading-relaxed">深い森の命をいただく、希少な食材。<br>入手困難でありながら、探している飲食店も多い商材です。</p></div>
+        <div class="soft-card rounded-3xl p-7"><p class="font-eng font-black text-[#C99518] tracking-[.18em] text-xs mb-4">02</p><h3 class="font-bold text-[#002B49] text-xl mb-3">クラフト飲料</h3><p class="text-sm text-gray-600 leading-relaxed">ノンアルコール、低アルコール、クラフト系飲料など、<br>新しい提案を求める来場者に届けたい商材です。</p></div>
+        <div class="soft-card rounded-3xl p-7"><p class="font-eng font-black text-[#C99518] tracking-[.18em] text-xs mb-4">03</p><h3 class="font-bold text-[#002B49] text-xl mb-3">地域加工食品</h3><p class="text-sm text-gray-600 leading-relaxed">職人が手仕事で仕上げる、地域の優れた商品。<br>量産はできなくても、確かな価値を持つ食品を歓迎します。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="section bg-[#FBF7EE] border-y border-[#E8DDC8]">
+    <div class="container-narrow text-center">
+      <p class="section-label">WHO WE SUPPORT</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-6">
+        CROSSが出会いをつくりたい商品
+      </h2>
+      <p class="text-gray-700 leading-loose mb-12">
+        小さなインポーター、国産で頑張る生産者、中小企業、<br class="hidden sm:block">
+        地域メーカー、高級食材を扱う事業者まで。<br class="hidden sm:block">
+        飲食業界に届けたい価値ある商品を歓迎します。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
+        <div class="soft-card support-card rounded-3xl p-7">
+          <div class="w-10 h-10 rounded-full bg-[#C99518] text-white grid place-items-center font-eng font-black mb-5">1</div>
+          <h3 class="font-bold text-[#002B49] text-xl mb-3">まだ広く知られていない良品</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">いい商品を持っているのに、どこでPRすればよいかわからない。<br class="hidden sm:block">そんな商品に飲食業界との接点をつくります。</p>
+        </div>
+        <div class="soft-card support-card rounded-3xl p-7">
+          <div class="w-10 h-10 rounded-full bg-[#C99518] text-white grid place-items-center font-eng font-black mb-5">2</div>
+          <h3 class="font-bold text-[#002B49] text-xl mb-3">高級食材・こだわり食材</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">レストラン、ホテル、ワインバーにふさわしい、<br class="hidden sm:block">品質やストーリーのある食材。</p>
+        </div>
+        <div class="soft-card support-card rounded-3xl p-7">
+          <div class="w-10 h-10 rounded-full bg-[#C99518] text-white grid place-items-center font-eng font-black mb-5">3</div>
+          <h3 class="font-bold text-[#002B49] text-xl mb-3">飲食業界の個性づくりにつながる商品</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">ワインとの相性、メニュー提案、客単価向上など、<br class="hidden sm:block">店舗の価値を高める商材。</p>
+        </div>
+        <div class="soft-card support-card rounded-3xl p-7">
+          <div class="w-10 h-10 rounded-full bg-[#C99518] text-white grid place-items-center font-eng font-black mb-5">4</div>
+          <h3 class="font-bold text-[#002B49] text-xl mb-3">小さくても、個性のあるつくり手</h3>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">国産の小規模生産者やクラフトメーカー、<br class="hidden sm:block">地域の優れた商品などを歓迎します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="section bg-white">
+    <div class="container-wide text-center">
+      <p class="section-label">EXHIBIT CATEGORIES</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-6">
+        ワインに関わる飲食業界へ<br class="hidden sm:block">提案したい商材を募集します
+      </h2>
+      <p class="text-gray-700 leading-loose mb-10 max-w-3xl mx-auto">
+        「現場でどう使えるか」<br class="hidden sm:block">
+        「どんな料理・一皿・サービスにつながるか」まで<br class="hidden sm:block">
+        伝えられる商材を歓迎します。
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center mb-10">
+        <div class="category-card rounded-2xl p-6"><i data-lucide="wine" class="w-7 h-7 mx-auto mb-3 text-[#2E6B29]"></i><p class="font-bold text-[#002B49]">ワイン・酒類</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">ワイン／クラフトビール／スピリッツ／ノンアルコール</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="ham" class="w-7 h-7 mx-auto mb-3 text-[#E94E1B]"></i><p class="font-bold text-[#002B49]">チーズ・シャルキュトリ</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">生ハム／加工肉／チーズ／ペアリング食材</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="beef" class="w-7 h-7 mx-auto mb-3 text-[#E94E1B]"></i><p class="font-bold text-[#002B49]">ジビエ・肉加工品</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">レストラン向け高付加価値食材</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="container" class="w-7 h-7 mx-auto mb-3 text-[#2E6B29]"></i><p class="font-bold text-[#002B49]">魚介・缶詰</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">保存性・提案性のある食品商材</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="globe-2" class="w-7 h-7 mx-auto mb-3 text-[#2E6B29]"></i><p class="font-bold text-[#002B49]">輸入食品・加工食品</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">業務用／小売向け／メニュー提案商材</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="bottle-wine" class="w-7 h-7 mx-auto mb-3 text-[#C99518]"></i><p class="font-bold text-[#002B49]">調味料・オイル</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">オリーブオイル／ソース／調味料類</p></div>
+        <div class="category-card rounded-2xl p-6"><i data-lucide="candy" class="w-7 h-7 mx-auto mb-3 text-[#E94E1B]"></i><p class="font-bold text-[#002B49]">スナック・チョコ</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">酒類との相性を提案できる食品</p></div>
+        <div class="category-card rounded-2xl p-6 border-[#C99518]/60 bg-[#FFFCF5]"><i data-lucide="refrigerator" class="w-7 h-7 mx-auto mb-3 text-[#002B49]"></i><p class="font-bold text-[#002B49]">ワインセラー・関連機材</p><p class="text-xs text-gray-500 mt-2 leading-relaxed">グラス／什器／保存機器なども歓迎</p></div>
+      </div>
+
+      <div class="bg-[#FBF7EE] border border-[#E8DDC8] rounded-3xl p-6 max-w-3xl mx-auto mb-8">
+        <p class="font-bold text-[#002B49] mb-2">掲載カテゴリ以外の商材もご相談ください</p>
+        <p class="text-sm text-gray-600 leading-relaxed">飲食業界に提案したい商材であれば、食品・飲料・機材を問わずご相談を承ります。</p>
+      </div>
+      <a href="mailto:info@tokyowinecomplex.com?subject=CROSS%20INTERNATIONAL%202026%E5%87%BA%E5%B1%95%E5%95%86%E6%9D%90%E3%81%AE%E7%9B%B8%E8%AB%87" class="btn-outline rounded-full px-8 py-4 font-black inline-flex items-center justify-center gap-3">
+        info@tokyowinecomplex.com に相談する <i data-lucide="mail" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="booth" class="section bg-[#FBF7EE] border-y border-[#E8DDC8]">
+    <div class="container-wide text-center">
+      <p class="section-label">BOOTH PLAN</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-6">
+        推奨はスタンダード<br class="hidden sm:block">入口はハーフから
+      </h2>
+      <p class="text-gray-700 leading-loose mb-5 max-w-3xl mx-auto">
+        商品をしっかり見せて商談までつなげるなら、<br class="hidden sm:block">
+        スタンダードブースがおすすめです。<br><br>
+        初めての出展や小規模事業者には、<br class="hidden sm:block">
+        ハーフブースから参加できる入口もご用意しています。
+      </p>
+      <p class="text-sm text-gray-600 leading-relaxed bg-white border border-[#E8DDC8] rounded-2xl p-4 max-w-3xl mx-auto mb-10">
+        ブースはテーブルを配置するシンプルな形式です。<br class="hidden sm:block">
+        スタンダードブースは1800×900mmのテーブル1台、ワイドブースは同テーブルを2台並べて使用します。<br class="hidden sm:block">
+        背面バナーや装飾物をご希望の場合は、各社にてご用意ください。
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 text-left">
+        <div class="booth-card">
+          <div class="booth-img-wrap"><img src="images/booth-half.webp" alt="ハーフブースイメージ：A社は生ハム・加工肉、B社はオリーブオイル"></div>
+          <div class="p-7">
+            <p class="font-eng text-xs tracking-[.18em] font-black text-[#C99518] mb-3">ENTRY</p><div class="flex items-start justify-between gap-4 mb-4"><h3 class="text-2xl font-bold text-[#002B49]">ハーフブース</h3><p class="booth-price">¥40,000</p></div>
+            <p class="font-bold text-[#2E6B29] mb-3">1テーブルを2社で共有</p>
+            <p class="text-sm text-gray-600 leading-relaxed">初出展や小規模事業者の挑戦しやすい入口です。<br class="hidden lg:block">画像例では、A社は生ハム・加工肉、B社はオリーブオイルを展示しています。</p>
+          </div>
+        </div>
+        <div class="booth-card featured">
+          <div class="booth-img-wrap"><img src="images/booth-standard.webp" alt="スタンダードブースイメージ：ワイン出展社"></div>
+          <div class="p-7">
+            <p class="font-eng text-xs tracking-[.18em] font-black text-[#E94E1B] mb-3">RECOMMENDED</p><div class="flex items-start justify-between gap-4 mb-4"><h3 class="text-2xl font-bold text-[#002B49]">スタンダードブース</h3><p class="booth-price">¥68,000</p></div>
+            <p class="font-bold text-[#E94E1B] mb-3">1800×900mm テーブル1台</p>
+            <p class="text-sm text-gray-600 leading-relaxed">商品背景、試食・試飲、商談まで、最もバランスよく伝えられる基本ブースです。<br class="hidden lg:block">まずおすすめしたい出展形態です。</p>
+          </div>
+        </div>
+        <div class="booth-card">
+          <div class="booth-img-wrap"><img src="images/booth-wide.webp" alt="ワイドブースイメージ：ワインとワインセラーを横並びで展示"></div>
+          <div class="p-7">
+            <p class="font-eng text-xs tracking-[.18em] font-black text-[#C99518] mb-3">EXPAND</p><div class="flex items-start justify-between gap-4 mb-4"><h3 class="text-2xl font-bold text-[#002B49]">ワイドブース</h3><p class="booth-price">¥122,400</p></div>
+            <p class="font-bold text-[#2E6B29] mb-3">1800×900mm テーブル2台</p>
+            <p class="text-sm text-gray-600 leading-relaxed">展示量を増やし、商談効率を高めたい出展社に適しています。<br class="hidden lg:block">ワインセラーや関連機材など、大きめの商材を見せたい場合にもおすすめです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outline" class="section bg-white">
+    <div class="container-narrow text-center">
+      <p class="section-label">EVENT OUTLINE</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] mb-10">開催概要</h2>
+      <div class="bg-white rounded-3xl border border-[#E8DDC8] overflow-hidden shadow-sm text-left">
+        <dl>
+          <div class="info-row"><dt>名称</dt><dd>CROSS INTERNATIONAL Food & Market 2026</dd></div>
+          <div class="info-row"><dt>日時</dt><dd>2026年9月24日（木）12:00－17:00</dd></div>
+          <div class="info-row"><dt>会場</dt><dd>東京・浜松町｜東京都立産業貿易センター浜松町館</dd></div>
+          <div class="info-row"><dt>対象来場者</dt><dd>飲食店、酒販店、ホテル、バイヤー、ソムリエ、シェフ等の業界関係者</dd></div>
+          <div class="info-row"><dt>出展申込締切</dt><dd class="font-bold text-[#E94E1B]">2026年8月9日（日）</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section bg-[#FBF7EE] border-y border-[#E8DDC8]">
+    <div class="faq-wrap text-center px-5 md:px-8">
+      <p class="section-label">FAQ</p>
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold text-[#002B49] leading-tight keep-all mb-6">よくあるご質問</h2>
+      <p class="text-gray-700 leading-loose mb-10 max-w-3xl mx-auto">
+        出展対象やブース仕様について迷われる場合も、まずはお気軽にご相談ください。<br class="hidden sm:block">
+        飲食業界に提案したい商品・サービスを幅広く歓迎しています。
+      </p>
+
+      <p class="faq-group-title">Exhibit Eligibility</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>自社の商品・サービスが出展対象になるかわかりません</summary>
+          <div class="faq-answer">
+            <p>飲食業界に提案したい商品・サービスであれば、まずはお気軽にご相談ください。</p>
+            <p>ワイン、食品、飲料に限らず、カフェ・飲食店向けのPOP、販促ツール、什器、ワインセラー、保存機器、店舗向けサービスなども出展対象となる場合があります。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>海外の生産者や、まだ日本に輸入されていない商品でも出展できますか？</summary>
+          <div class="faq-answer">
+            <p>はい、海外の生産者様や、まだ日本に輸入されていない商品の出展も歓迎しています。</p>
+            <p>日本市場で輸入してくれる会社を探したい、インポーターや飲食業界関係者に商品を紹介したいという目的での出展にもご活用いただけます。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>通関や輸入手続きは主催者側で対応してもらえますか？</summary>
+          <div class="faq-answer">
+            <p>通関、輸入手続き、必要書類の準備等は、出展者様またはご利用のエージェント様にてご対応をお願いいたします。</p>
+            <p>主催者側では、展示会出展および会場運営に関するご案内を中心にサポートいたします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>オンライン販売を中心にしている商品でも出展できますか？</summary>
+          <div class="faq-answer">
+            <p>はい、オンライン販売を中心とした商品も歓迎しています。</p>
+            <p>実際に商品を試飲・試食・体験してもらうことで、飲食店、酒販店、ホテル、バイヤーなど、B2Bの新しい販路開拓につなげる機会としてご活用いただけます。</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="faq-group-title">Booth & Equipment</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>ブースは囲われていますか？また、何が用意されていますか？</summary>
+          <div class="faq-answer">
+            <p>ブースに三面の囲いはなく、基本はテーブルのみを配置するシンプルな形式です。</p>
+            <p>外周ブースは背面が壁面となる場合がありますが、壁面へのテープ類・両面テープ等での貼付はできません。<br>内側の島ブースには背面の壁はありません。</p>
+            <p>ポスターやパネル等を掲示したい場合は、各社にて自立式のついたてやパネルスタンド等をご用意ください。<br>背面装飾には、バナースタンドの設置をおすすめしています。</p>
+            <p>装飾物、試飲・試食に必要な備品、販促物、バナー、什器、消耗品などは、各出展社様にてご準備をお願いいたします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>ワインセラーや大きな機材を展示する場合、テーブルは必要ですか？</summary>
+          <div class="faq-answer">
+            <p>ワインセラーや大型什器・機材などを展示される場合で、テーブルが不要な際は事前にお知らせください。</p>
+            <p>その場合は、テーブルを設置せず、展示スペースのみを確保いたします。なお、機材の搬入・設置・撤去は各出展社様にてご手配をお願いいたします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>水は使用できますか？</summary>
+          <div class="faq-answer">
+            <p>会場内の給湯室をご利用いただけます。</p>
+            <p>ブース内に個別の水道設備はございませんので、必要に応じて各社で運用しやすい備品をご準備ください。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>調理はできますか？電源は使えますか？</summary>
+          <div class="faq-answer">
+            <p>IH機材の使用は可能です。</p>
+            <p>ただし、火器の使用はできません。電力をご利用の場合は、オプションにて1,500Wまでの電力供給が可能です。</p>
+            <p>IH機材、冷蔵・保温機材などをご使用の場合は、事前にご相談ください。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>どのブースを選べばよいですか？</summary>
+          <div class="faq-answer">
+            <p>商品をしっかり見せて商談までつなげたい場合は、スタンダードブースをおすすめしています。</p>
+            <p>初めての出展や小規模での参加を希望される場合は、ハーフブースからご参加いただけます。</p>
+            <p>展示点数が多い場合や、ワインセラー・什器などの機材を見せたい場合は、ワイドブースをご検討ください。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="bg-white border border-[#E8DDC8] rounded-3xl p-6 max-w-3xl mx-auto mt-10">
+        <p class="font-bold text-[#002B49] mb-2">その他のご質問もお気軽にお問い合わせください</p>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">掲載内容に当てはまらない場合も、出展内容に応じて個別にご案内いたします。</p>
+        <a href="mailto:info@tokyowinecomplex.com?subject=CROSS%20INTERNATIONAL%202026%E5%87%BA%E5%B1%95%E3%81%AE%E7%9B%B8%E8%AB%87" class="btn-outline rounded-full px-7 py-3 font-black inline-flex items-center justify-center gap-3">
+          info@tokyowinecomplex.com に相談する <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+<section class="relative overflow-hidden bg-[#002B49] text-white py-16 md:py-20 px-6 md:px-8 text-center">
+    <div class="cross-lines opacity-50"><span class="l3"></span><span class="l4"></span><span class="l5"></span></div>
+    <div class="relative container-narrow">
+      <h2 class="font-mincho text-3xl md:text-5xl font-bold leading-tight keep-all mb-5">
+        食と飲の交差点を<br class="hidden sm:block">一緒につくる
+      </h2>
+      <p class="text-white/78 leading-loose max-w-3xl mx-auto mb-10">
+        小さなつくり手の挑戦を、<br class="hidden sm:block">
+        確かな商談機会へ変えるために。<br><br>
+        CROSS INTERNATIONALは、地域と世界のプロダクトを、<br class="hidden sm:block">
+        飲食業界のプロフェッショナル市場へつなぎます。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://tokyowinecomplex.com/entry-form-2026-c-international/" target="_blank" rel="noopener noreferrer" class="btn-primary rounded-full px-9 py-4 font-black inline-flex items-center justify-center gap-3">
+          出展申込はこちら <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="https://admin.prius-pro.jp/m/winecomplex/download.php?p=%241%243286%246e6ck6jWO63qygL3BZQZp1p&b=10&i=2013" target="_blank" rel="noopener noreferrer" class="rounded-full px-9 py-4 font-black border border-white/55 text-white inline-flex items-center justify-center gap-3 hover:bg-white/10 transition">
+          出展要項はこちら <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white py-10 text-center text-xs text-gray-400 font-eng tracking-widest">
+    © 2026 SEEDS BANK CO., LTD. ALL RIGHTS RESERVED.
+  </footer>
+
+  <div class="md:hidden fixed bottom-0 left-0 w-full p-4 bg-white/95 backdrop-blur-md border-t border-[#E8DDC8] z-[60]">
+    <a href="https://tokyowinecomplex.com/entry-form-2026-c-international/" target="_blank" rel="noopener noreferrer" class="btn-primary w-full rounded-full py-4 font-black text-center block">
+      出展申込はこちら
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
